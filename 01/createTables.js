@@ -1,4 +1,3 @@
-const AWS = require('aws-sdk')
 const dynamodb = require('../lib/dynamodb')
 const tablePrefix = "GMJS."
 
@@ -67,7 +66,7 @@ function createJobApplicationTable() {
         KeyType: "HASH"
       },
       {
-        AttributeName: "ApplicantId",
+        AttributeName: "UserId",
         KeyType: "RANGE"
       }
     ],
@@ -77,7 +76,7 @@ function createJobApplicationTable() {
         AttributeType: "S"
       },
       {
-        AttributeName: "ApplicantId",
+        AttributeName: "UserId",
         AttributeType: "S"
       }
     ],
